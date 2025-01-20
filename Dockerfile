@@ -4,7 +4,7 @@ RUN apk --no-cache add curl
 
 WORKDIR /usr/share/nginx/html
 
-COPY . /usr/share/nginx/html
+COPY ./src/ /usr/share/nginx/html
 
 RUN rm -rf /tmp/*
 
