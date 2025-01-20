@@ -1,0 +1,14 @@
+services:
+  frontend:
+    ports:
+      - 8090:80
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: ${IMAGE:-aisuvro/docker-assignment:v1}
+    volumes:
+      - ./src:/usr/share/nginx/html
+
+
+
+    
