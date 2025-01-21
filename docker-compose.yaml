@@ -8,6 +8,13 @@ services:
     image: ${IMAGE:-aisuvro/docker-assignment:v1}
     volumes:
       - ./src:/usr/share/nginx/html
+    healthcheck:
+      test: curl -f http://localhost || exit 1
+      interval: 10s
+      timeout: 10s
+      retries: 2
+    restart: always
+
 
 
 
